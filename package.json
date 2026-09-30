@@ -1,0 +1,19 @@
+{
+  "name": "youtube-live-translator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "3.8.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  },
+  "overrides": {
+    "sharp": "0.35.4"
+  }
+}

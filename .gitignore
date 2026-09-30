@@ -1,0 +1,54 @@
+# Dependencies and generated extension
+node_modules/
+dist/
+
+# Local credentials; keep safe environment templates available
+.env
+.env.*
+!.env.example
+!.env.*.example
+!.env.sample
+!.env.template
+/.npmrc
+/.netrc
+/secrets/
+/.secrets/
+/credentials.json
+/token.json
+/client_secret*.json
+/*.pem
+/*.key
+/*.p12
+/*.pfx
+
+# Local logs and OS metadata
+*.log
+/logs/
+.DS_Store
+
+# Local recordings and transcripts; fixtures under test/ remain available
+/recordings/
+/captions/
+/subtitles/
+/transcripts/
+/local-data/
+/*.wav
+/*.mp3
+/*.mp4
+/*.m4a
+/*.webm
+/*.pcm
+/*.f32
+/*.srt
+/*.vtt
+
+# Downloaded model weights and caches
+/models/
+/model-cache/
+/.cache/
+/*.onnx
+/*.onnx_data
+/*.safetensors
+/*.gguf
+/*.pt
+/*.pth

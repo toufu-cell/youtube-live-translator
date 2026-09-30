@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "YouTubeライブ英日字幕",
+  "version": "0.1.0",
+  "description": "YouTubeの音声を端末内で英日翻訳し、動画に字幕を表示します。",
+  "minimum_chrome_version": "116",
+  "permissions": ["activeTab", "tabCapture", "offscreen", "storage"],
+  "host_permissions": ["https://www.youtube.com/*", "https://huggingface.co/*", "https://*.huggingface.co/*", "https://*.xethub.hf.co/*", "https://us.aws.cdn.hf.co/*"],
+  "background": { "service_worker": "sw.js", "type": "module" },
+  "action": { "default_popup": "popup.html" },
+  "content_scripts": [{
+    "matches": ["https://www.youtube.com/*"],
+    "js": ["content.js"],
+    "run_at": "document_idle",
+    "all_frames": false
+  }],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; connect-src 'self' https://huggingface.co https://*.huggingface.co https://*.xethub.hf.co https://us.aws.cdn.hf.co"
+  }
+}
